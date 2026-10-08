@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Kedar Thakur, Angular developer with 3 years of experience building fintech and enterprise web apps. Phiconnect, 10,000+ merchants, multi-tenant architecture."><title>Kedar Thakur | Angular Developer, 3 years</title>
+<meta name="description" content="Kedar Thakur, Frontend developer with 3 years of experience building fintech and enterprise web apps. Phiconnect, 10,000+ merchants, multi-tenant architecture."><title>Kedar Thakur | Frontend Developer, 3 years</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -160,13 +160,41 @@ h3{font-size:1.15rem}
 .impact{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:34px}
 .impact div{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:var(--r);padding:20px;color:var(--mute)}
 .impact strong{display:block;font-size:2.5rem;line-height:1.1;color:var(--ink)}
+
+.card.main{padding:28px;margin-bottom:20px}
+.main h3{font-size:1.5rem;margin:12px 0 6px}
+.main .impact{margin-top:28px}
+.main .impact strong{font-size:2rem}
+
+/* contact */
+.ct-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:start}
+@media(max-width:860px){.ct-grid{grid-template-columns:1fr;gap:32px}}
+.ct-list{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:18px}
+.ct-list li{display:flex;align-items:center;gap:14px}
+.ct-list small{display:block;color:var(--mute);font-size:.8rem}
+.ct-list a{font-weight:600;text-decoration:none}.ct-list a:hover{text-decoration:underline}
+.ico{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:var(--r);background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent);font-weight:800;font-size:1.05rem}
+.ct-form{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:30px;box-shadow:0 30px 60px -34px color-mix(in srgb,var(--accent) 55%,transparent)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:560px){.two{grid-template-columns:1fr}.ct-form{padding:20px}}
+.ct-form input,.ct-form textarea{padding:13px 14px;transition:border-color .2s,box-shadow .2s}
+.ct-form input:focus,.ct-form textarea:focus{outline:0;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 22%,transparent)}
+.ct-form textarea{resize:vertical}
+.ct-form label{margin-top:16px}.two label{margin-top:0}
+.send{width:100%;margin-top:22px;padding:14px}
+#fstatus{margin-top:10px;min-height:1.2em}
+
+.ct-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:38px}
+.ct-cards .card{display:flex;align-items:center;gap:14px}
+.ct-cards small{display:block;color:var(--mute);font-size:.8rem}
+.ct-cards a{font-weight:600;text-decoration:none;word-break:break-word}.ct-cards a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
 <div id="sp"></div>
 <nav><div class="wrap">
   <b class="brand"><span class="mono">KT</span>Kedar Thakur</b>
-  <div class="links"><a href="#phiconnect">Phiconnect</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+  <div class="links"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
   <div class="tenants" role="group" aria-label="Switch site theme">
     <button data-t="atlas" aria-pressed="true">Atlas</button>
     <button data-t="northwind" aria-pressed="false">Northwind</button>
@@ -181,8 +209,8 @@ h3{font-size:1.15rem}
       <span class="badge"><i></i>Open to new opportunities</span>
       <h1 id="h1">I build the frontend behind merchant onboarding.</h1>
       <div class="role">Currently crafting <span id="rot"></span><b class="caret"></b></div>
-      <p id="lede">Angular developer in Pune with 3 years of experience shipping enterprise web apps for a payments company, from KYC workflows to the operations portal that reviews them.</p>
-      <div class="row"><a class="btn" href="#contact">Contact me</a><a class="btn ghost" href="#phiconnect">See my main project</a></div>
+      <p id="lede">Frontend developer in Pune with 3 years of experience shipping enterprise web apps for a payments company, from KYC workflows to the operations portal that reviews them.</p>
+      <div class="row"><a class="btn" href="#contact">Contact me</a><a class="btn ghost" href="#projects">See my main project</a></div>
       <ul class="facts"><li>Pune, India</li><li>Angular 13 to 19</li><li>Fintech and ed-tech</li></ul>
     </div>
     <aside class="card config" aria-label="Live theme configuration">
@@ -211,11 +239,12 @@ h3{font-size:1.15rem}
   </div>
 </div></section>
 
-<section id="phiconnect" class="feature"><div class="wrap">
-  <span class="badge"><i></i>Flagship project</span>
-  <h2>Phiconnect: the platform merchants use to go live</h2>
-  <p class="mute">A merchant onboarding and KYC platform I own end to end at Prysoms Systems, from requirements to production release.</p>
-  <div class="pc-grid">
+<section id="projects"><div class="wrap">
+  <h2>Projects</h2>
+  <article class="card main"><span class="badge"><i></i>Main project</span>
+    <h3>Phiconnect: merchant onboarding and KYC platform</h3>
+    <p class="mute">The platform merchants use to go live. I own the frontend end to end at Prysoms Systems, from requirements to production release.</p>
+    <div class="pc-grid">
     <div class="vis" aria-label="Illustrative onboarding screen">
       <div class="win"><div class="wbar"><i></i><i></i><i></i><span>Merchant onboarding</span></div>
         <div class="wbody">
@@ -246,32 +275,14 @@ h3{font-size:1.15rem}
     <div><strong data-to="9">9</strong>onboarding stages designed and built</div>
   </div>
   <p style="margin-top:22px"><span class="tag">Angular 19</span><span class="tag">TypeScript</span><span class="tag">RxJS</span><span class="tag">Standalone components</span><span class="tag">Lazy loading</span><span class="tag">Interceptors</span><span class="tag">Route guards</span></p>
-</div></section>
-
-<section id="experience"><div class="wrap">
-  <h2>Experience</h2>
-  <div class="tl">
-    <div><h3>Angular Developer, Prysoms Systems</h3><p class="mute">Mar 2024 to present, Pune</p>
-      <ul><li>Own frontend delivery for Phiconnect, from requirements to production release.</li><li>Lead 3-tenant white-labeling, multi-step onboarding flows and the internal ops portal.</li><li>Work with a team of 5 developers in agile sprints using Jira and GitLab.</li></ul></div>
-    <div><h3>Frontend Intern, Prysoms Systems</h3><p class="mute">Jan 2024 to Mar 2024</p>
-      <p>Converted to a full-time Angular Developer after the internship.</p></div>
-    <div><h3>Full Stack Development, IT Shaala</h3><p class="mute">Jul 2023 to Jan 2024, Pune</p></div>
-    <div><h3>B.Sc. Computer Science, Savitribai Phule Pune University</h3></div>
-  </div>
-</div></section>
-
-<section id="projects"><div class="wrap">
-  <h2>More projects</h2>
-  <div class="grid">
+</article>
+    <div class="grid">
     <article class="card"><div class="thumb" style="--h:0deg"></div><h3>MMS Portal</h3><p class="mute">Merchant management system</p>
       <ul><li>Upgraded Merchant and Tenant portals from Angular 12 to 19, fixing breaking changes and deprecated APIs.</li><li>Delivered white-labeling with theme switches and tenant routing.</li><li>Resolved critical production defects with backend and support teams.</li></ul>
       <p><span class="tag">Angular</span><span class="tag">TypeScript</span><span class="tag">RxJS</span></p></article>
     <article class="card"><div class="thumb" style="--h:50deg"></div><h3>Katha Mehfil Admin Panel</h3><p class="mute">Digital storytelling and audio platform</p>
       <ul><li>Role-based dashboard for users, subscription plans, school management and playlists.</li><li>Story publishing workflow, recommendations and content requests.</li><li>Dashboard analytics with charts, search, pagination and CRUD screens.</li></ul>
       <p><span class="tag">Angular</span><span class="tag">Role-based access</span></p></article>
-    <article class="card"><div class="thumb" style="--h:-50deg"></div><h3>Gradvisor Admin Panel</h3><p class="mute">Career guidance platform operations</p>
-      <ul><li>User management and role-based access control.</li><li>Modules for app users, insights, universities, employers, opportunities and system notifications.</li><li>Authentication and Chart.js data visualization.</li></ul>
-      <p><span class="tag">Angular 13</span><span class="tag">PrimeNG</span><span class="tag">Bootstrap</span><span class="tag">Chart.js</span></p></article>
     <article class="card"><div class="thumb" style="--h:100deg"></div><h3>El Junto Admin Panel</h3><p class="mute">Book club management system</p>
       <ul><li>User, club and book catalog management with reporting modules.</li><li>Pagination, search, modal dialogs and real-time notifications.</li><li>RESTful CRUD integration with reactive forms, route guards and HTTP interceptors.</li></ul>
       <p><span class="tag">Angular 13</span><span class="tag">Bootstrap 4</span><span class="tag">RxJS</span></p></article>
@@ -281,6 +292,18 @@ h3{font-size:1.15rem}
     <article class="card"><div class="thumb" style="--h:140deg"></div><h3>ECG Genius</h3><p class="mute">Medical quiz app</p>
       <ul><li>Real-time scoring and audio management.</li><li>Responsive KBC-themed interface.</li><li>Modular component architecture.</li></ul>
       <p><span class="tag">Angular 18+</span><span class="tag">TypeScript</span></p></article>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <h2>Experience</h2>
+  <div class="tl">
+    <div><h3>Frontend Developer, Prysoms Systems</h3><p class="mute">Mar 2024 to present, Pune</p>
+      <ul><li>Own frontend delivery for Phiconnect, from requirements to production release.</li><li>Lead 3-tenant white-labeling, multi-step onboarding flows and the internal ops portal.</li><li>Work with a team of 5 developers in agile sprints using Jira and GitLab.</li></ul></div>
+    <div><h3>Frontend Intern, Prysoms Systems</h3><p class="mute">Jan 2024 to Mar 2024</p>
+      <p>Converted to a full-time Frontend Developer after the internship.</p></div>
+    <div><h3>Full Stack Development, IT Shaala</h3><p class="mute">Jul 2023 to Jan 2024, Pune</p></div>
+    <div><h3>B.Sc. Computer Science, Savitribai Phule Pune University</h3></div>
   </div>
 </div></section>
 
@@ -295,34 +318,15 @@ h3{font-size:1.15rem}
 </div></section>
 
 <section id="contact"><div class="wrap">
-  <h2>Hiring or collaborating? Start your application.</h2>
-  <p class="mute">Three short steps, like a merchant onboarding. It opens a pre-filled email to me at the end.</p>
-  <div class="stepper" id="stepper">
-    <div class="bar"><div id="prog"></div></div>
-    <div class="steps" id="stepLabels"><span class="on">1 Identity</span><span>2 Requirement</span><span>3 Agreement</span></div>
-    <div data-s="0">
-      <label for="name">Your name</label><input id="name" autocomplete="name"><div class="err" id="e-name"></div>
-      <label for="company">Company</label><input id="company" autocomplete="organization">
-      <label for="email">Email</label><input id="email" type="email" autocomplete="email"><div class="err" id="e-email"></div>
-    </div>
-    <div data-s="1" class="hide">
-      <label>Project type</label>
-      <div class="chips" id="types"><button type="button" aria-pressed="false">Full-time role</button><button type="button" aria-pressed="false">Contract</button><button type="button" aria-pressed="false">Angular upgrade</button><button type="button" aria-pressed="false">New product</button></div>
-      <div class="err" id="e-type"></div>
-      <label>Timeline</label>
-      <div class="chips" id="times"><button type="button" aria-pressed="false">Now</button><button type="button" aria-pressed="false">This quarter</button><button type="button" aria-pressed="false">Exploring</button></div>
-      <label for="msg">Details</label><textarea id="msg" rows="3"></textarea>
-    </div>
-    <div data-s="2" class="hide">
-      <div class="status" id="summary"></div>
-      <p class="mute" style="margin-top:12px">Sending opens your email app with this request filled in.</p>
-    </div>
-    <div class="row">
-      <button class="btn ghost hide" id="back" type="button">Back</button>
-      <button class="btn" id="next" type="button">Continue</button>
-    </div>
+  <h2>Hiring or have a project? Let's talk.</h2>
+  <p class="mute">Send me an email or a LinkedIn message and I'll reply within 24 hours.</p>
+  <div class="row"><a class="btn" href="mailto:thakurkedar2003@gmail.com">Email me</a><a class="btn ghost" href="https://linkedin.com/in/kedar-thakur-a3424b302" target="_blank" rel="noopener">Connect on LinkedIn</a></div>
+  <div class="ct-cards">
+    <div class="card"><span class="ico">&#9993;&#xFE0E;</span><div><small>Email</small><a href="mailto:thakurkedar2003@gmail.com">thakurkedar2003@gmail.com</a></div></div>
+    <div class="card"><span class="ico">&#9742;&#xFE0E;</span><div><small>Phone</small><a href="tel:+919146746170">9146746170</a></div></div>
+    <div class="card"><span class="ico">in</span><div><small>LinkedIn</small><a href="https://linkedin.com/in/kedar-thakur-a3424b302" target="_blank" rel="noopener">kedar-thakur-a3424b302</a></div></div>
+    <div class="card"><span class="ico">&#8962;&#xFE0E;</span><div><small>Location</small>Pune, India</div></div>
   </div>
-  <p style="margin-top:28px">Prefer direct? <a href="mailto:thakurkedar2003@gmail.com">thakurkedar2003@gmail.com</a> | <a href="tel:+919146746170">9146746170</a> | <a href="https://linkedin.com/in/kedar-thakur-a3424b302" rel="noopener">LinkedIn</a></p>
 </div></section>
 </main>
 <footer><div class="wrap">Kedar Thakur, Pune, India.</div></footer>
@@ -331,7 +335,7 @@ h3{font-size:1.15rem}
 <script>
 const cfg={atlas:["#1f5bff","Manrope","14px"],northwind:["#9d8cff","Space Grotesk","4px"],meridian:["#0b7a6e","Source Serif 4","0px"]};
 const copy={
-  atlas:["I build the frontend behind merchant onboarding.","Angular developer in Pune. 3 years shipping enterprise web apps for a payments company, from KYC workflows to the operations portal that reviews them."],
+  atlas:["I build the frontend behind merchant onboarding.","Frontend developer in Pune. 3 years shipping enterprise web apps for a payments company, from KYC workflows to the operations portal that reviews them."],
   northwind:["Complex workflows, kept simple on screen.","Angular 19 specialist. Multi-step flows, role-based portals and security-critical features that hold up under 10,000+ merchants."],
   meridian:["Frontend engineering for regulated products.","I design maintainable Angular architecture for fintech: shared codebases, careful forms and secure sessions."]
 };
@@ -346,41 +350,7 @@ function setTheme(t){
 document.querySelectorAll('.tenants button').forEach(b=>b.onclick=()=>setTheme(b.dataset.t));
 try{const s=localStorage.getItem('kt-theme');if(s&&copy[s])setTheme(s);else setTheme("atlas")}catch(e){setTheme("atlas")}
 
-// KYC-style stepper
-let step=0;const val={type:'',time:''};
 const $=id=>document.getElementById(id);
-function pick(box,key){box.querySelectorAll('button').forEach(b=>b.onclick=()=>{box.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');val[key]=b.textContent;});}
-pick($('types'),'type');pick($('times'),'time');
-function show(){
-  document.querySelectorAll('[data-s]').forEach(d=>d.classList.toggle('hide',+d.dataset.s!==step));
-  $('prog').style.width=((step+1)/3*100)+'%';
-  [...$('stepLabels').children].forEach((s,i)=>s.classList.toggle('on',i===step));
-  $('back').classList.toggle('hide',step===0);
-  $('next').textContent=step===2?'Send request':'Continue';
-  if(step===2)$('summary').innerHTML='<b>Ready for review</b><br>'+esc($('name').value)+(($('company').value)?' at '+esc($('company').value):'')+'<br>'+esc(val.type)+(val.time?' | '+esc(val.time):'')+'<br>Kedar usually replies within 24 hours.';
-}
-function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
-function valid(){
-  if(step===0){
-    let ok=true;
-    $('e-name').textContent=$('name').value.trim()?'':'Enter your name.';
-    const em=/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test($('email').value.trim());
-    $('e-email').textContent=em?'':'Enter a valid email address.';
-    return !!$('name').value.trim()&&em;
-  }
-  if(step===1){$('e-type').textContent=val.type?'':'Pick a project type.';return !!val.type}
-  return true;
-}
-$('next').onclick=()=>{
-  if(!valid())return;
-  if(step===2){
-    const body=`Name: ${$('name').value}\nCompany: ${$('company').value}\nEmail: ${$('email').value}\nType: ${val.type}\nTimeline: ${val.time}\n\n${$('msg').value}`;
-    location.href='mailto:thakurkedar2003@gmail.com?subject='+encodeURIComponent('Portfolio inquiry: '+val.type)+'&body='+encodeURIComponent(body);
-    return;
-  }
-  step++;show();
-};
-$('back').onclick=()=>{step--;show()};
 
 // Idle timeout hint (like Phiconnect's session handling)
 let idle;const toast=$('toast');
